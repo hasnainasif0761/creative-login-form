@@ -21,10 +21,19 @@ body
     font-size: 30px;
     cursor: pointer;
 }
-
 nav.nav-bg
 {
     background-color: #60A5FA;
+    position: fixed;
+    transition: all 0.5s ease-in-out;
+}
+.hero-Cont
+{
+    background-image: linear-gradient(to right, #00000034,#060707b6), url('./img/banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 
@@ -35,7 +44,7 @@ nav.nav-bg
     {
         position: relative;
         z-index: 1;
-        transition: all 0.4s ease;
+        transition: all 0.4s ease-in-out;
     }
     .hamburger
     {
