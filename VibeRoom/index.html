@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VibeRoom</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-gray-100 h-screen flex">
+  <!-- Sidebar: rooms -->
+  <aside class="w-72 bg-gray-900 p-4 flex flex-col">
+    <h1 class="text-2xl font-bold mb-4">VibeRoom</h1>
+    <button id="loginBtn" class="mb-3 bg-indigo-600 px-3 py-2 rounded">Login with Google</button>
+    <div id="userBox" class="hidden mb-4 text-sm"></div>
+    <div class="flex gap-2 mb-3">
+      <input id="roomName" class="flex-1 px-2 py-1 rounded bg-gray-800" placeholder="New room name">
+      <button id="createRoom" class="bg-emerald-600 px-3 rounded">+</button>
+    </div>
+    <ul id="roomList" class="space-y-2 overflow-y-auto"></ul>
+  </aside>
+
+  <!-- Main: chat -->
+  <main class="flex-1 flex flex-col">
+    <header class="p-4 border-b border-gray-800 flex justify-between">
+      <div id="roomTitle" class="text-xl font-semibold">Select a room</div>
+      <div id="presence" class="text-sm text-emerald-400"></div>
+    </header>
+    <section id="messages" class="flex-1 overflow-y-auto p-4 space-y-2"></section>
+    <footer class="p-4 border-t border-gray-800 flex gap-2">
+      <input id="msgInput" class="flex-1 px-3 py-2 rounded bg-gray-800" placeholder="Type a vibe...">
+      <button id="sendBtn" class="bg-indigo-600 px-4 rounded">Send</button>
+    </footer>
+  </main>
+
+  <script type="module" src="./js/ui.js"></script>
+</body>
+</html>
